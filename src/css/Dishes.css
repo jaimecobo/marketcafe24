@@ -1,0 +1,73 @@
+/* ####################### CAROUSEL ############################### */
+@keyframes scroll {
+	0% { transform: translateX(0%); }
+
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+
+/* // Styling */
+.slider {
+	background: transparent;
+    color: transparent;
+    background-color: transparent;
+	/* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: absolute;
+	width: 1900px;
+    /* margin-left: 345px;  */
+    margin-top: 40px;
+}
+
+/* .slide-track{ 
+    background: red;
+    filter: drop-shadow(16px 16px 20px red) invert(75%);
+ } */
+
+
+.slider::before,
+.slider::after {
+    @include white-gradient;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+	
+.silder::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.silder::before {
+    left: 0;
+    top: 0;
+}
+
+.slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slide {
+    height: 100px;
+    width: 250px;
+}
+
+
+/* #gradientBar_home_img{
+    width:1900px;
+    height: 175px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+} */
+
+body{
+    background-color:azure;
+}
