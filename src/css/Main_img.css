@@ -1,0 +1,9 @@
+#main_img{
+    /* width:fit-content; */
+    width: 1920px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    filter: brightness(60%);
+}
