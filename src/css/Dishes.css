@@ -2,23 +2,34 @@
 @keyframes scroll {
 	0% { transform: translateX(0%); }
 
-	100% { transform: translateX(calc(-250px * 7))}
+	100% { transform: translateX(calc(-250px * 9))}
 }
 
 
+#gradient01{
+    width: 1920px;
+    height: 260px;
+}
+
 /* // Styling */
+
+.slide img{
+    height: 240px;
+    width: 240px;
+}
 .slider {
 	background: transparent;
     color: transparent;
     background-color: transparent;
 	/* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
-	height: 100px;
+	height: 250px;
 	margin: auto;
 	overflow:hidden;
 	position: absolute;
-	width: 1900px;
+    /* height: 400px; */
+	width: 1920px;
     /* margin-left: 345px;  */
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 /* .slide-track{ 
@@ -31,9 +42,9 @@
 .slider::after {
     @include white-gradient;
     content: "";
-    height: 100px;
+    height: 240px;
     position: absolute;
-    width: 200px;
+    width: 240px;
     z-index: 2;
 }
 	
@@ -51,12 +62,13 @@
 .slide-track {
     animation: scroll 40s linear infinite;
     display: flex;
-    width: calc(250px * 14);
+    width: calc(250px * 16);
 }
 
 .slide {
-    height: 100px;
-    width: 250px;
+    height: 240px;
+    width: 240px;
+    margin-left: 5px;
 }
 
 
@@ -71,3 +83,4 @@
 body{
     background-color:azure;
 }
+
