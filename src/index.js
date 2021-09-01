@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Banner from "./components/Banner"
+import Main_img from './components/Main_img'
+import Navbar from "./components/Navbar"
 import Disches from './components/Dishes';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Banner />
+    <Main_img />
+    <Navbar />
+  
     <Disches />
   </React.StrictMode>,
   document.getElementById('root')
