@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react'
 
 function Weather() {
   const [weatherState, setWeatherState] = useState()
-  // const apiKey = "96676b6f27da3b5e8f5ea205416d1642";
+  // const apiKey = "*********";
   // const zipCode = "Madrid";
 
 
 useEffect(() => {
 
   
-  const fetchData = async () => {
+  const fetchData = async () => {dc
 
     const data = await fetch("http://api.openweathermap.org/data/2.5/weather?q=Madrid&units=metric&appid=96676b6f27da3b5e8f5ea205416d1642");
     
