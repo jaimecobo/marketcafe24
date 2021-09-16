@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-const e = React.createElement;
+// const e = React.createElement;
 
 
 function DateTimeMadrid() {
@@ -36,4 +36,4 @@ function DateTimeMadrid() {
     )
 }
 
-export default DateTimeMadrid;
+export default DateTimeMadrid
