@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react'
 
 function Weather() {
   const [weatherState, setWeatherState] = useState()
-  // const apiKey = "*********";
+
+  // const apiKey = "";
   // const zipCode = "Madrid";
 
 
