@@ -1,14 +1,49 @@
-import React, { Component } from 'react';
+import React, { Component, useCallback } from "react";
 import '../css/Subscribe.css';
 
 import bandera from '../images/Bandera02.png'
-// import services01 from '..//images/Services01.svg'
-// import services02 from '..//images/Services02.svg'
+
+// Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+import firebaseConfig from './FirebaseConfig'
+import { AuthProvider } from "./Auth_Email";
+// TODO: Add SDKs for Firebase products that you want to usees
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+// https://firebase.google.com/docs/web/setup#available-librari
 
 
-class Subscribe extends Component {
+// Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+
+
+const SignUp = ({ history }) => {
+    const handleSignUp = useCallback(async event => {
+      event.preventDefault();
+    //   const { email, password } = event.target.elements;
+      const { email } = event.target.elements;
+      try {
+        await firebaseConfig
+          .auth()
+        //   .createUserWithEmailAndPassword(email.value, password.value);
+          .createUserWithEmail(email.value);
+        history.push("/");
+      } catch (error) {
+        alert(error);
+      }
+    }, [history]);
+
+
+
+
+
+// class Subscribe extends Component {
     
-    render() {
+//     render() {
         return (
            
             <div class="image-container">
@@ -22,10 +57,10 @@ class Subscribe extends Component {
                         <input></input>
                         <button></button>
                     </form> */}
-                    <form>
+                    <form onSubmit={handleSignUp}>
 
                         <div class="form-outline mb-4">
-                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="Correo electrónico" />
+                        <input name="email" type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="Correo electrónico" />
                         {/* <label class="form-label" for="form3Example1cg">Your Name</label> */}
                         </div>
 
@@ -34,6 +69,8 @@ class Subscribe extends Component {
                         </div>
 
                     </form>
+                    <AuthProvider>
+                    </AuthProvider>
                 </div>
                 {/* <img alt="" id="services01" src={services01}/>
                 <img alt="" id="services02" src={services02}/>
@@ -41,7 +78,7 @@ class Subscribe extends Component {
             </div>
 
         );
-    }
+//     }
 }
 
-export default Subscribe;
+export default SignUp;
