@@ -1,0 +1,46 @@
+div{
+    position: relative; 
+    left: 0; 
+    top: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+#greyBar{
+    width: 1920px;
+    height: 250px;
+}
+
+#text_cafe{
+    position:absolute;
+    height:240px;
+    width: 640px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 640px;
+}
+
+#logoBar01{
+    position:absolute;
+    height:240px;
+    width: 640px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 1280px;
+}
+
+#logoBar02{
+    position:absolute;
+    height:240px;
+    width: 640px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 0px;
+    
+}
