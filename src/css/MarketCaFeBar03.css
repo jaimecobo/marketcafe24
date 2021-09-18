@@ -1,0 +1,65 @@
+div{
+    position: relative; 
+    left: 0; 
+    top: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+#greyBar{
+    width: 1920px;
+    height: 250px;
+}
+
+#text_bread{
+    position:absolute;
+    height:280px;
+    width: 940px;
+    /* border-radius: 20px; */
+    margin-top: -20px;
+    /* margin-left: 20px; */
+    left: 480px;
+}
+
+#logoBreadBar01{
+    position:absolute;
+    height:240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 0px;
+}
+#logoBreadBar02{
+    position:absolute;
+    height:240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 240px;
+}
+
+#logoBreadBar03{
+    position:absolute;
+    height:240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 1420px;
+    
+}
+#logoBreadBar04{
+    position:absolute;
+    height:240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 1660px;
+    
+}
