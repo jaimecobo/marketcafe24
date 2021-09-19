@@ -1,4 +1,6 @@
 import React, { Component, useCallback } from "react";
+import {db} from './FirebaseConfig';
+import { collection, addDoc } from "firebase/firestore"; 
 
 import '../css/Subscribe.css';
 
@@ -6,14 +8,14 @@ import bandera from '../images/Bandera02.png'
 
 
 
-const form = document.getElementsByClassName('form-inline');
+// const form = document.getElementsByClassName('form-inline');
 
 
-const inputEmail = document.getElementById('inputEmail');
+// const inputEmail = document.getElementById('inputEmail');
 
 
 
-    function firebasePush(input) {
+//     function firebasePush(input) {
         //prevents from braking
         // if (!app.apps.length) {
         //     app.initializeApp(firebaseConfig);
@@ -26,7 +28,7 @@ const inputEmail = document.getElementById('inputEmail');
         //         mail: input.value
         //     }
         // );
-    }
+    // }
 
 //push on form submit
     // if (form) {
@@ -40,14 +42,46 @@ const inputEmail = document.getElementById('inputEmail');
     //     })
     // }
 
+    const Subscribe = () =>{
+
+        // const [name, setName] = useState("");
+        const [email, setEmail] = useState("");
+        // const [message, setMessage] = useState("");
+    
+    
+          async function handleSubmitSubscribe(e){
+    
+          e.preventDefault();
+          
+    
+          try {
+            const docRef = await addDoc(collection(db, "subscribers"), {
+            //   name: name,
+              email: email,
+            //   message: message
+            });
+            alert("Gracias por subscribirte!");
+            // console.log("Document written with ID: ", docRef.id);
+          } catch (error) {
+            // alert(error.message);
+            // console.error("Error adding document: ", error);
+          }
+    
+        //   setName('');
+          setEmail('');
+        //   setMessage('');
+        };
+    
+    
 
 
 
 
 
-class Subscribe extends Component {
 
-    render() {
+// class Subscribe extends Component {
+
+//     render() {
         return (
            
             <div class="image-container">
@@ -62,10 +96,11 @@ class Subscribe extends Component {
                         <button></button>
                     </form> */}
                     {/* <form onSubmit={handleSignUp}> */}
-                    <form class="form-inline d-flex">
+                    <form className="form form-inline d-flex" onSubmit={handleSubmitSubscribe}>
                 
                         <div class="form-outline mb-4">
-                        <input name="email" type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Correo electrónico" />
+                        <input type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Correo electrónico" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                        {/* <input name="email" type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Correo electrónico" /> */}
                         {/* <label class="form-label" for="form3Example1cg">Your Name</label> */}
                         </div>
 
@@ -84,6 +119,6 @@ class Subscribe extends Component {
 
         );
     }
-}
+// }
 
 export default Subscribe;
