@@ -14,21 +14,28 @@ import bandera from '../images/Bandera02.png'
         async function handleSubmitSubscribe(e){
     
              e.preventDefault();
-          
+             var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+             if(email.match(mailformat)){
     
-            try {
-                const docRef = await addDoc(collection(db, "subscribers"), {
-        
-                email: email,
-                });
-                alert("Gracias por subscribirte!");
-                // console.log("Document written with ID: ", docRef.id);
-            } catch (error) {
-                // alert(error.message);
-                // console.error("Error adding document: ", error);
-            }
+                try {
+                    const docRef = await addDoc(collection(db, "subscribers"), {
+            
+                    email: email,
+                    });
+                    alert("Gracias por subscribirte!");
+                    // console.log("Document written with ID: ", docRef.id);
+                } catch (error) {
+                    // alert(error.message);
+                    // console.error("Error adding document: ", error);
+                }
 
             setEmail('');
+             }
+             else
+                {
+                alert("Por favor ingrese una dirección de correo electrónico válida!");
+                // alert("You have entered an invalid email address!");
+                }
         };
         
     
@@ -53,7 +60,8 @@ import bandera from '../images/Bandera02.png'
                             placeholder="Correo electrónico" 
                             value={email} 
                             onChange={(e)=>setEmail(e.target.value)} 
-                            pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                            // pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                            // pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,"
                             required/>
                         </div>
 
