@@ -1,6 +1,5 @@
 import React from 'react';
 import { GoogleMap, useLoadScript } from '@react-google-maps/api';
-// import { mapStyles } from './mapStyles';
 
 const containerStyle = {
   width: '100vw',
@@ -11,10 +10,6 @@ const center = {
   lat: 40.42365763166418,
   lng: -3.707617356858952
 };
-
-// const options = {
-//   styles: mapStyles,
-// };
 
 function Map01() {
 
@@ -33,7 +28,6 @@ function Map01() {
         mapContainerStyle={containerStyle}
         center={center}
         zoom={19}
-        // options={options}
       ></GoogleMap>
     </div>
   );
