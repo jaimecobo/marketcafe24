@@ -1,49 +1,53 @@
 import React, { Component, useCallback } from "react";
+
 import '../css/Subscribe.css';
 
 import bandera from '../images/Bandera02.png'
 
-// Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-import firebaseConfig from './FirebaseConfig'
-import { AuthProvider } from "./Auth_Email";
-// TODO: Add SDKs for Firebase products that you want to usees
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-// https://firebase.google.com/docs/web/setup#available-librari
 
 
-// Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+const form = document.getElementsByClassName('form-inline');
 
 
-const SignUp = ({ history }) => {
-    const handleSignUp = useCallback(async event => {
-      event.preventDefault();
-    //   const { email, password } = event.target.elements;
-      const { email } = event.target.elements;
-      try {
-        await firebaseConfig
-          .auth()
-        //   .createUserWithEmailAndPassword(email.value, password.value);
-          .createUserWithEmail(email.value);
-        history.push("/");
-      } catch (error) {
-        alert(error);
-      }
-    }, [history]);
+const inputEmail = document.getElementById('inputEmail');
 
 
 
+    function firebasePush(input) {
+        //prevents from braking
+        // if (!app.apps.length) {
+        //     app.initializeApp(firebaseConfig);
+        // }
+        // const firebase = initializeApp(firebaseConfig);
+
+        //push itself
+        // var mailsRef = app.database().ref('Emails').push().set(
+        //     {
+        //         mail: input.value
+        //     }
+        // );
+    }
+
+//push on form submit
+    // if (form) {
+    //     document.addEventListener('submit', function (evt) {
+    //     evt.preventDefault();
+    //     console.log('Email = ' + inputEmail);
+    //     firebasePush(inputEmail);
+
+    //         //shows alert if everything went well.
+    //         return alert('Data Successfully Sent to Realtime Database');
+    //     })
+    // }
 
 
-// class Subscribe extends Component {
-    
-//     render() {
+
+
+
+
+class Subscribe extends Component {
+
+    render() {
         return (
            
             <div class="image-container">
@@ -57,20 +61,21 @@ const SignUp = ({ history }) => {
                         <input></input>
                         <button></button>
                     </form> */}
-                    <form onSubmit={handleSignUp}>
-
+                    {/* <form onSubmit={handleSignUp}> */}
+                    <form class="form-inline d-flex">
+                
                         <div class="form-outline mb-4">
-                        <input name="email" type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="Correo electrónico" />
+                        <input name="email" type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Correo electrónico" />
                         {/* <label class="form-label" for="form3Example1cg">Your Name</label> */}
                         </div>
 
                         <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-2 text-body">Enviar</button>
+                        <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-2 text-body">Enviar</button>
                         </div>
 
                     </form>
-                    <AuthProvider>
-                    </AuthProvider>
+                    {/* <AuthProvider>
+                    </AuthProvider> */}
                 </div>
                 {/* <img alt="" id="services01" src={services01}/>
                 <img alt="" id="services02" src={services02}/>
@@ -78,7 +83,7 @@ const SignUp = ({ history }) => {
             </div>
 
         );
-//     }
+    }
 }
 
-export default SignUp;
+export default Subscribe;
