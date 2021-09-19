@@ -16,27 +16,31 @@ import '../css/ContactUs.css';
     async function handleSubmitContact(e){
 
         e.preventDefault();
-      
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(email.match(mailformat)){
 
-        try {
-          const docRef = await addDoc(collection(db, "contacts"), {
-            name: name,
-            email: email,
-            message: message
-          });
-          alert("Gracias por escribir!");
-          // console.log("Document written with ID: ", docRef.id);
-        } catch (error) {
-          // alert(error.message);
-          // console.error("Error adding document: ", error);
+          try {
+            const docRef = await addDoc(collection(db, "contacts"), {
+              name: name,
+              email: email,
+              message: message
+            });
+            alert("Gracias por escribir!");
+            // console.log("Document written with ID: ", docRef.id);
+          } catch (error) {
+            // alert(error.message);
+            // console.error("Error adding document: ", error);
+          }
+
+          setName('');
+          setEmail('');
+          setMessage('');
         }
-
-        setName('');
-        setEmail('');
-        setMessage('');
+        else{
+            alert("Por favor ingrese una dirección de correo electrónico válida!");
+            // alert("You have entered an invalid email address!");
+        }
     };
-
-
 
 
     return (
@@ -83,7 +87,8 @@ import '../css/ContactUs.css';
                 id="input_text" 
                 placeholder="Correo electrónico" 
                 value={email} onChange={(e)=>setEmail(e.target.value)} 
-                pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                // pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                // pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,"
                 required/>
               </li>
               {/* <li>
