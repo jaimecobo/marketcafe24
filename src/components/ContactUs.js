@@ -69,10 +69,22 @@ import '../css/ContactUs.css';
 
             <ul id="ul_form" class="nav">
               <li>
-                <input type="text" id="input_text" placeholder="Nombre" value={name} onChange={(e)=>setName(e.target.value)} required/>
+                <input 
+                type="text" 
+                id="input_text" 
+                placeholder="Nombre" 
+                value={name} 
+                onChange={(e)=>setName(e.target.value)} 
+                required/>
               </li>
               <li>
-                <input type="text" id="input_text" placeholder="Correo electrónico" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
+                <input 
+                type="text" 
+                id="input_text" 
+                placeholder="Correo electrónico" 
+                value={email} onChange={(e)=>setEmail(e.target.value)} 
+                pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                required/>
               </li>
               {/* <li>
                 <input type="text" id="input_text" value=""/>
