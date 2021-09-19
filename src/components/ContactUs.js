@@ -69,10 +69,10 @@ import '../css/ContactUs.css';
 
             <ul id="ul_form" class="nav">
               <li>
-                <input type="text" id="input_text" placeholder="Nombre" value={name} onChange={(e)=>setName(e.target.value)}/>
+                <input type="text" id="input_text" placeholder="Nombre" value={name} onChange={(e)=>setName(e.target.value)} required/>
               </li>
               <li>
-                <input type="text" id="input_text" placeholder="Correo electrónico" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                <input type="text" id="input_text" placeholder="Correo electrónico" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
               </li>
               {/* <li>
                 <input type="text" id="input_text" value=""/>
@@ -87,7 +87,7 @@ import '../css/ContactUs.css';
 
             <ul id="ul_form" class="nav">
               <li>
-                <textarea cols="40" rows="7" id="avia_4_1" placeholder="..." value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
+                <textarea cols="40" rows="7" id="avia_4_1" placeholder="..." value={message} onChange={(e)=>setMessage(e.target.value)} required></textarea>
               </li>
             </ul>
 
