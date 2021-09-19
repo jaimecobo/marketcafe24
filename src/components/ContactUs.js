@@ -13,27 +13,27 @@ import '../css/ContactUs.css';
     const [message, setMessage] = useState("");
 
 
-      async function handleSubmitContact(e){
+    async function handleSubmitContact(e){
 
-      e.preventDefault();
+        e.preventDefault();
       
 
-      try {
-        const docRef = await addDoc(collection(db, "contacts"), {
-          name: name,
-          email: email,
-          message: message
-        });
-        alert("Gracias por escribir!");
-        // console.log("Document written with ID: ", docRef.id);
-      } catch (error) {
-        // alert(error.message);
-        // console.error("Error adding document: ", error);
-      }
+        try {
+          const docRef = await addDoc(collection(db, "contacts"), {
+            name: name,
+            email: email,
+            message: message
+          });
+          alert("Gracias por escribir!");
+          // console.log("Document written with ID: ", docRef.id);
+        } catch (error) {
+          // alert(error.message);
+          // console.error("Error adding document: ", error);
+        }
 
-      setName('');
-      setEmail('');
-      setMessage('');
+        setName('');
+        setEmail('');
+        setMessage('');
     };
 
 
