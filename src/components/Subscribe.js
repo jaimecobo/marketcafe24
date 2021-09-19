@@ -46,7 +46,15 @@ import bandera from '../images/Bandera02.png'
                     <form  onSubmit={handleSubmitSubscribe}>
                 
                         <div class="form-outline mb-4">
-                            <input type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Correo electrónico" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
+                            <input 
+                            type="email" 
+                            id="inputEmail" 
+                            class="form-control form-control-lg" 
+                            placeholder="Correo electrónico" 
+                            value={email} 
+                            onChange={(e)=>setEmail(e.target.value)} 
+                            pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                            required/>
                         </div>
 
                         <div class="d-flex justify-content-center">
