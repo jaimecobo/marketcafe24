@@ -43,10 +43,10 @@ import bandera from '../images/Bandera02.png'
                     <h1>Subscríbete</h1>
                     <p>Podrás recibir nuestras fabulosas ofertas y promociones</p>
                
-                    <form className="form form-inline d-flex" onSubmit={handleSubmitSubscribe}>
+                    <form  onSubmit={handleSubmitSubscribe}>
                 
                         <div class="form-outline mb-4">
-                            <input type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Correo electrónico" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                            <input type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Correo electrónico" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
                         </div>
 
                         <div class="d-flex justify-content-center">
