@@ -25,19 +25,19 @@ class Navbar extends Component {
 
                         <ul className="navbar-nav mr-auto">
 
-                            <li>
+                            {/* <li>
                                 <h5> | </h5>
                             </li> 
 
                             <li className="nav-item active">
                                 <a className="nav-link" href="#"><h5> <Clock /> </h5><span className="sr-only">(current)</span></a>
-                            </li> 
+                            </li>  */}
 
                             <li>
                                 <h5> | </h5>
                             </li> 
 
-                            <li className="nav-item dropdown">
+                            {/* <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     More Options
                                 </a>
@@ -52,14 +52,45 @@ class Navbar extends Component {
                             </li> 
                             <li>
                                 <h5> | </h5>
-                            </li> 
+                            </li>  */}
 
                             <li className="nav-item active">
-                                <a className="nav-link" href="#"><h5> <DateTimeMadrid /> </h5><span className="sr-only">(current)</span></a>
+                                {/* <a className="nav-link" href="#"><h5> <DateTimeMadrid /> </h5><span className="sr-only">(current)</span></a> */}
+                                <a className="nav-link" href="#"><h5> Servicios</h5><span className="sr-only">(current)</span></a>
+                            
                             </li> 
 
                             <li>
                                 <h5> | </h5>
+                            </li> 
+                            <li className="nav-item active">
+                                {/* <a className="nav-link" href="#"><h5> <DateTimeMadrid /> </h5><span className="sr-only">(current)</span></a> */}
+                                <a className="nav-link" href="#"><h5> Suscríbete</h5><span className="sr-only">(current)</span></a>
+                            
+                            </li> 
+                            <li>
+                                <h5> | </h5>
+                            </li> 
+                            <li className="nav-item active">
+                                {/* <a className="nav-link" href="#"><h5> <DateTimeMadrid /> </h5><span className="sr-only">(current)</span></a> */}
+                                <a className="nav-link" href="#"><h5> Encuéntranos</h5><span className="sr-only">(current)</span></a>
+                            
+                            </li> 
+                            <li>
+                                <h5> | </h5>
+                            </li> 
+                            <li className="nav-item active">
+                                {/* <a className="nav-link" href="#"><h5> <DateTimeMadrid /> </h5><span className="sr-only">(current)</span></a> */}
+                                <a className="nav-link" href="#"><h5> Escribid</h5><span className="sr-only">(current)</span></a>
+                            
+                            </li> 
+                            <li>
+                                <h5> | </h5>
+                            </li> 
+                            <li className="nav-item active">
+                                {/* <a className="nav-link" href="#"><h5> <DateTimeMadrid /> </h5><span className="sr-only">(current)</span></a> */}
+                                <a className="nav-link" href="#"><h5> Reseñas</h5><span className="sr-only">(current)</span></a>
+                            
                             </li> 
 
                             {/* <li className="nav-item active">
@@ -68,11 +99,11 @@ class Navbar extends Component {
 
                         </ul>
             
-
+{/* 
                         <form className="form-inline my-2 my-lg-0" action="http://google.com/search" target="_blank">
                             <input className="form-control mr-sm-2" id="query01" name="q" type="search" placeholder="Google" aria-label="Search" />
                             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                        </form>
+                        </form> */}
 
                     </div>
             
