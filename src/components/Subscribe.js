@@ -62,7 +62,7 @@ import bandera from '../images/Bandera02.png'
                 <img alt="" id="subscribe" src={bandera} />
                 <div id="reg">
                     {/* <h1>Regístrate</h1> */}
-                    <h1>Subscríbete</h1>
+                    <h1>Suscríbete</h1>
                     <p>Podrás recibir nuestras fabulosas ofertas y promociones</p>
                
                     <form  onSubmit={handleSubmitSubscribe}>
@@ -75,8 +75,6 @@ import bandera from '../images/Bandera02.png'
                             placeholder="Correo electrónico" 
                             value={email} 
                             onChange={(e)=>setEmail(e.target.value)} 
-                            // pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-                            // pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,"
                             required/>
                         </div>
 
@@ -86,14 +84,8 @@ import bandera from '../images/Bandera02.png'
                                 type="submit" 
                                 class="btn btn-success btn-block btn-lg gradient-custom-2 text-body" 
                             >Enviar</button>
-                            {/* <button type="submit" 
-                                class="btn btn-success btn-block btn-lg gradient-custom-2 text-body g-recaptcha" 
-                                data-sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-                                data-callback='onSubmit' 
-                                data-action='submit'
-                            >Enviar</button> */}
                         </div>
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-center" id="recaptchaSubscribe">
                             <ReCAPTCHA
                                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                                 // sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
