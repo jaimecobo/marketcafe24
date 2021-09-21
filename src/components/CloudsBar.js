@@ -20,8 +20,8 @@ class CloudsBar extends Component {
     render() {
         return (
 
-            <div className="image-container">
-                <img id="cloudsBar" alt="" src={clouds} /> 
+            <div className="image-container" id="cloudsBarContainer">
+                <img id="cloudsBar" className="img-fluid" alt="" src={clouds} /> 
                 <span>
                     <img alt="" id="caffeine_owl01" src={decaf_owl}/>
                 </span>
