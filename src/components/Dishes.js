@@ -409,7 +409,7 @@ class Dishes extends Component {
                      </div>
                  </div>
             
-                <img id="gradient01" alt="" src={gradient} />
+                <img id="gradient01" className="img-fluid" alt="" src={gradient} />
 
             </div>
     
