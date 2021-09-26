@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from "react";
-import firebaseConfig from "./FirebaseConfig.js";
+// import React, { useEffect, useState } from "react";
+// import app from "./FirebaseConfig.js";
 
-export const AuthContext = React.createContext();
+// export const AuthContext = React.createContext();
 
-export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
-  const [pending, setPending] = useState(true);
+// export const AuthProvider = ({ children }) => {
+//   const [currentUser, setCurrentUser] = useState(null);
+//   const [pending, setPending] = useState(true);
 
-  useEffect(() => {
-      firebaseConfig.auth().onAuthStateChanged((user) => {
-      setCurrentUser(user)
-      setPending(false)
-    });
-  }, []);
+//   useEffect(() => {
+//     app.auth().onAuthStateChanged((user) => {
+//       setCurrentUser(user)
+//       setPending(false)
+//     });
+//   }, []);
 
-  if(pending){
-    return <>Loading...</>
-  }
+//   if(pending){
+//     return <>Loading...</>
+//   }
 
-  return (
-    <AuthContext.Provider
-      value={{
-        currentUser
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
-};
+//   return (
+//     <AuthContext.Provider
+//       value={{
+//         currentUser
+//       }}
+//     >
+//       {children}
+//     </AuthContext.Provider>
+//   );
+// };
 
 // export default Auth_Email;
