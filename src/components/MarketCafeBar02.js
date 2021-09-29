@@ -21,24 +21,24 @@ class MarketCafeBar02 extends Component {
         return (
 
             <div className="image-container">
-                <img id="cloudsBar" alt="" src={sunnySky} /> 
+                <img id="sunnyCloudsBar" alt="" src={sunnySky} /> 
                 <span>
-                    <img alt="" id="logoRed" src={logoRed}/>
+                    <img className="img-fluid" alt="" id="logoRed" src={logoRed}/>
                 </span>
                 <span>
-                    <img alt="" id="logoOrange" src={logoOrange}/>
+                    <img className="img-fluid" alt="" id="logoOrange" src={logoOrange}/>
                 </span>
                 <span>
-                    <img alt="" id="logoYellow" src={logoYellow}/>
+                    <img className="img-fluid" alt="" id="logoYellow" src={logoYellow}/>
                 </span>
                 <span>
-                    <img alt="" id="logoGreen" src={logoGreen}/>
+                    <img className="img-fluid" alt="" id="logoGreen" src={logoGreen}/>
                 </span>
                 <span>
-                    <img alt="" id="logoBlue" src={logoBlue}/> 
+                    <img className="img-fluid" alt="" id="logoBlue" src={logoBlue}/> 
                 </span>
                 <span>
-                    <img alt="" id="logoPurple" src={logoPurple}/>  
+                    <img className="img-fluid" alt="" id="logoPurple" src={logoPurple}/>  
                 </span>
 
             </div>
