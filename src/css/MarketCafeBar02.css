@@ -1,0 +1,314 @@
+div{
+    position: relative; 
+    left: 0; 
+    top: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+#sunnyCloudsBar{
+    width: 1920px;
+    height: 250px;
+}
+
+#logoRed{
+    position:absolute;
+    height:240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 70px;
+}
+
+#logoOrange{
+    position:absolute;
+    height:240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 378px;
+}
+
+#logoYellow{
+    position:absolute;
+    height:240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 686px;
+}
+
+#logoGreen{
+    position:absolute;
+    height:240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 994px;
+}
+
+#logoBlue{
+    position:absolute;
+    height:240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 1302px;
+}
+
+#logoPurple{
+    position:absolute;
+    height:240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-top: 5px;
+    /* margin-left: 20px; */
+    left: 1610px;
+}
+
+
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 1700px) {
+    #logoRed{
+        left: 30px;
+    }
+    
+    #logoOrange{
+        left: 310px;
+    }
+    
+    #logoYellow{
+        left: 590px;
+    }
+    
+    #logoGreen{
+        left: 870px;
+    }
+    
+    #logoBlue{
+        left: 1150px;
+    }
+    
+    #logoPurple{
+        left: 1430px;
+    }
+        
+}
+    
+@media only screen and (max-width : 1500px) {
+    
+    #logoRed{
+        left: 5px;
+    }
+    
+    #logoOrange{
+        left: 255px;
+    }
+    
+    #logoYellow{
+        left: 505px;
+    }
+    
+    #logoGreen{
+        left: 755px;
+    }
+    
+    #logoBlue{
+        left: 1005px;
+    }
+    
+    #logoPurple{
+        left: 1255px;
+    }
+    
+}
+    
+    
+@media only screen and (max-width : 1300px) {
+    #sunnyCloudsBar{
+        height: 215px;
+    }
+
+    #logoRed{
+        height:205px;
+        width: 205px;
+        left: 10px;
+    }
+    
+    #logoOrange{
+        height:205px;
+        width: 205px;
+        left: 225px;
+    }
+    
+    #logoYellow{
+        height:205px;
+        width: 205px;
+        left: 440px;
+    }
+    
+    #logoGreen{
+        height:205px;
+        width: 205px;
+        left: 655px;
+    }
+    
+    #logoBlue{
+        height:205px;
+        width: 205px;
+        left: 870px;
+    }
+    
+    #logoPurple{
+        height:205px;
+        width: 205px;
+        left: 1085px;
+    }
+    
+}
+    
+    
+@media only screen and (max-width : 1100px) {
+
+    #sunnyCloudsBar{
+        height: 182px;
+    }
+
+    #logoRed{
+        height:172px;
+        width: 172px;
+        left: 4px;
+    }
+    
+    #logoOrange{
+        height:172px;
+        width: 172px;
+        left: 188px;
+    }
+    
+    #logoYellow{
+        height:172px;
+        width: 172px;
+        left: 372px;
+    }
+    
+    #logoGreen{
+        height:172px;
+        width: 172px;
+        left: 556px;
+    }
+    
+    #logoBlue{
+        height:172px;
+        width: 172px;
+        left: 740px;
+    }
+    
+    #logoPurple{
+        height:172px;
+        width: 172px;
+        left: 924px;
+    }
+}
+    
+    
+@media only screen and (max-width : 900px) {
+   
+    #sunnyCloudsBar{
+        height: 153px;
+    }
+
+    #logoRed{
+        height:143px;
+        width: 143px;
+        left: 6px;
+    }
+    
+    #logoOrange{
+        height:143px;
+        width: 143px;
+        left: 155px;
+    }
+    
+    #logoYellow{
+        height:143px;
+        width: 143px;
+        left: 304px;
+    }
+    
+    #logoGreen{
+        height:143px;
+        width: 143px;
+        left: 453px;
+    }
+    
+    #logoBlue{
+        height:143px;
+        width: 143px;
+        left: 602px;
+    }
+    
+    #logoPurple{
+        height:143px;
+        width: 143px;
+        left: 751px;
+    }
+
+
+}
+    
+    
+    
+@media only screen and (max-width : 700px) {
+    
+    #sunnyCloudsBar{
+        height: 120px;
+    }
+
+    #logoRed{
+        height:110px;
+        width: 110px;
+        left: 5px;
+    }
+    
+    #logoOrange{
+        height:110px;
+        width: 110px;
+        left: 121px;
+    }
+    
+    #logoYellow{
+        height:110px;
+        width: 110px;
+        left: 237px;
+    }
+    
+    #logoGreen{
+        height:110px;
+        width: 110px;
+        left: 353px;
+    }
+    
+    #logoBlue{
+        height:110px;
+        width: 110px;
+        left: 469px;
+    }
+    
+    #logoPurple{
+        height:110px;
+        width: 110px;
+        left: 585px;
+    }
+
+}
+    
