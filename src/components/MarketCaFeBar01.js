@@ -14,18 +14,18 @@ text_cafe
     render() {
         return (
 
-            <div className="image-container">
+            <div className="image-container" id="image_container_bar01">
 
-                <img id="greyBar" alt="" src={greyBar} /> 
+                <img className="img-fluid" id="greyBar" alt="" src={greyBar} /> 
 
                 <span>
-                    <img alt="" id="logoBar02" src={logo02}/>
+                    <img className="img-fluid" alt="" id="logoBar02" src={logo02}/>
                 </span>
                  <span>
-                    <img alt="" id="text_cafe" src={text_cafe}/>
+                    <img className="img-fluid" alt="" id="text_cafe" src={text_cafe}/>
                 </span>
                 <span>
-                    <img alt="" id="logoBar01" src={logo02}/>
+                    <img className="img-fluid" alt="" id="logoBar01" src={logo02}/>
                 </span>
 
             </div>
