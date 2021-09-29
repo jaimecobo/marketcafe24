@@ -7,6 +7,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import '../css/Subscribe.css';
 
 import bandera from '../images/Bandera02.png'
+import suscribete from '../images/edited/Subscribe01.png'
 
     const Subscribe = () =>{
 
@@ -57,17 +58,20 @@ import bandera from '../images/Bandera02.png'
 
         return (
            
-            <div class="image-container">
+            <div className="image-container" id="image-container-subscribe">
+            
 
-                <img alt="" id="subscribe" src={bandera} />
+                <img className="img-fluid" alt="" id="subscribe" src={bandera} />
+                <div id="flag_left"></div>
                 <div id="reg">
                     {/* <h1>Regístrate</h1> */}
-                    <h1>Suscríbete</h1>
-                    <p>Podrás recibir nuestras fabulosas ofertas y promociones</p>
+                    {/* <h1>Suscríbete</h1>
+                    <h3>Podrás recibir nuestras fabulosas ofertas y promociones</h3> */}
+                    <img className="img-fluid" alt="" id="suscribete" src={suscribete} />
                
                     <form  onSubmit={handleSubmitSubscribe}>
                 
-                        <div class="form-outline mb-4">
+                        <div className="form-outline mb-4">
                             <input 
                             type="email" 
                             id="inputEmail" 
@@ -78,26 +82,38 @@ import bandera from '../images/Bandera02.png'
                             required/>
                         </div>
 
-                        <div class="d-flex justify-content-center">
+                        <div className="d-flex justify-content-center">
                             <button 
+                                id="enviar_reg01"
                                 disabled = {isVerified}
                                 type="submit" 
                                 class="btn btn-success btn-block btn-lg gradient-custom-2 text-body" 
                             >Enviar</button>
                         </div>
-                        <div class="d-flex justify-content-center" id="recaptchaSubscribe">
+                    
+                        {/* <div className="d-flex justify-content-center" id="recaptchaSubscribe">
                             <ReCAPTCHA
                                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                                 // sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                                 onChange={handleOnChange}
                             />
-                        </div>
+                        </div> */}
 
-                    </form>
+                    </form> 
                     
                 </div>
-                
+                {/* <div id="flag_rigth"></div> */}
+            
+                {/* <div className="d-flex justify-content-center" id="recaptchaSubscribe">
+                    <ReCAPTCHA
+                        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                        // sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                        onChange={handleOnChange}
+                    />
+                </div>
+                 */}
             </div>
+
 
         );
     }
