@@ -45,7 +45,7 @@ nav ul li a {
 
 
 /*MEDIA QUERY*/
-@media only screen and (max-width : 1700px) {
+/* @media only screen and (max-width : 1700px) {
         
     .navbar{
         width: 1700px;
@@ -94,4 +94,4 @@ nav ul li a {
     .navbar{
         width: 500px;
     }
-}
+} */
