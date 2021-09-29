@@ -7,7 +7,8 @@
 
 
 #gradient01{
-    width: 1900px;
+    /* width: 1900px; */
+    width: 100%;
     height: 260px;
 }
 
@@ -28,7 +29,8 @@
 	overflow:hidden;
 	position: absolute;
     /* height: 400px; */
-	width: 1900px;
+	/* width: 1900px; */
+    width: 100%;
     /* margin-left: 345px;  */
     margin-top: 10px;
 }
@@ -87,12 +89,12 @@ body{
 
 
 /*MEDIA QUERY*/
-@media only screen and (max-width : 1700px) {
+/* @media only screen and (max-width : 1700px) { */
         
-    #gradient01{
+    /* #gradient01{
         width: 1700px;
         height: 260px;
-    }
+    } */
 
     /* // Styling */
 
@@ -101,16 +103,16 @@ body{
         width: 240px;
         border-radius: 20px;
     } */
-    .slider {
+    /* .slider {
         width: 1700px;
-        height: 250px;
+        height: 250px; */
         /* margin: auto;
         overflow:hidden;
         position: absolute; */
         /* height: 400px; */
         /* margin-left: 345px;  */
         /* margin-top: 10px; */
-    }
+    /* } */
 
     /* .slider::before,
     .slider::after {
@@ -146,9 +148,9 @@ body{
     } */
 
     
-}
+/* } */
 
-@media only screen and (max-width : 1500px) {
+/* @media only screen and (max-width : 1500px) {
         
     #gradient01{
         width: 1500px;
@@ -157,10 +159,10 @@ body{
     .slider {
         width: 1500px;
     }
-}
+} */
 
 
-@media only screen and (max-width : 1300px) {
+/* @media only screen and (max-width : 1300px) {
     #gradient01{
         width: 1300px;
     }
@@ -168,10 +170,10 @@ body{
     .slider {
         width: 1300px;
     }
-}
+} */
 
 
-@media only screen and (max-width : 1100px) {
+/* @media only screen and (max-width : 1100px) {
     #gradient01{
         width: 1100px;
     }
@@ -179,7 +181,7 @@ body{
     .slider {
         width: 1100px;
     }
-}
+} */
 
 
 @media only screen and (max-width : 900px) {
@@ -190,12 +192,12 @@ body{
         100% { transform: translateX(calc(-150px * 63))}
     }
     #gradient01{
-        width: 900px;
+        /* width: 900px; */
         height: 160px;
     }
 
     .slider {
-        width: 900px;
+        /* width: 900px; */
         height: 150px;
         margin-top: 5px;
     }
@@ -218,7 +220,7 @@ body{
 }
 
 
-@media only screen and (max-width : 700px) {
+/* @media only screen and (max-width : 700px) {
     #gradient01{
         width: 700px;
     }
@@ -226,4 +228,4 @@ body{
     .slider {
         width: 700px;
     }
-}
+} */
