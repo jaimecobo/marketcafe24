@@ -11,9 +11,9 @@ import Clouds from './components/CloudsBar';
 import Bernabeu from './components/Bernabeu'
 import AlcoholBar from './components/AlcoholBar';
 import Subscribe from './components/Subscribe';
-import MarketCaFeBar01 from './components/MarketCaFeBar01'
+import MarketCaFeBar01 from './components/MarketCafeBar01'
 import MarketCafeBar02 from './components/MarketCafeBar02'
-import MarketCaFeBar03 from './components/MarketCaFeBar03'
+import MarketCaFeBar03 from './components/MarketCafeBar03'
 import ContactUS from './components/ContactUs';
 import Map from './components/MapContainer'
 import Reviews from './components/Reviews'
@@ -31,16 +31,16 @@ ReactDOM.render(
     <Bernabeu />
     <AlcoholBar />
     <Subscribe />
-    <MarketCaFeBar01 />
-    <Map />
-    <MarketCafeBar02 />
-    <ContactUS />
-    <MarketCaFeBar03 />
-    {/* <Reviews /> */}
-    <Footer />
+    {/* <MarketCaFeBar01 /> */}
+    {/* <Map /> */}
+    {/* <MarketCafeBar02 /> */}
+    {/* <ContactUS />  */}{} 
+    {/* <MarketCaFeBar03 /> */}{}
+    {/* <Reviews /> */}{}
+    {/* <Footer /> */}{}
     {/* <Weather01 /> */}
     {/* <Weather02 /> */}
-    <WeatherTemplate />
+    {/* <WeatherTemplate /> */}{}
 
   </React.StrictMode>,
   document.getElementById('root')
