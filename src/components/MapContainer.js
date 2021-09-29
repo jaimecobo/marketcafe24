@@ -29,7 +29,7 @@ class MapContainer extends Component {
     
         return (
 
-            <div id="map">
+            <div id="map" className="container-fluid">
                 
                 <Map
                     className={'map'}
@@ -39,7 +39,7 @@ class MapContainer extends Component {
                     zoom={19}
                     
                     >
-                    <Marker
+                    <Marker 
                         position={coords} 
                         title={'MARKET CAFÉ 24 - SAN BERNARDO 33'}
                         icon={pointer}
